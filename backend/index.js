@@ -1,6 +1,7 @@
 import express, { request, response } from "express";
 import { PORT, mongoDBURL} from './config.js';
 import mongoose from "mongoose";
+import { Book } from './models/bookModel.js';
 const app = express();
 
 app.get('/', (request, response) => {
@@ -8,7 +9,15 @@ app.get('/', (request, response) => {
     return response.status(234).send('Welcome to Book Shop');
 });
 
-
+//Saving a new book
+app.post('/books', async  (request, response) => {
+    try {
+     } catch (error) {
+            console.log(error.message);
+            response.status(500).send({message: error.message});
+     }
+    
+});
 
 mongoose
 .connect(mongoDBURL)
