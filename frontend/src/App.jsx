@@ -7,7 +7,9 @@ function App() {
 
   return (
     <>
+    <nav>Nabar</nav>
       <Outlet />
+      <footer>Footer</footer>
     </>
   )
 }
