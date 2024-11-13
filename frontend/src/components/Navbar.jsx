@@ -34,7 +34,7 @@ const Navbar = () => {
         {
           currentUser ? <>
           <button>
-            <img src={avatarImg} alt="" style={{ width: "50px", height: "50px", borderRadius: "50%" }} />
+            <img src={avatarImg} alt="" className={`size-7 rounded-full ${currentUser ? 'ring-2 ring-blue-500' : ''}`} />
           </button>
           </> : <link to="/login"><HiOutlineUserCircle className="size-6" /></link>
         }
