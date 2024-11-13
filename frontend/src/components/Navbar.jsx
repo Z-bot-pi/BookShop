@@ -32,7 +32,7 @@ const Navbar = () => {
     <HiHeart className="size-6"/>
     </button>
 
-    <Link to="/cart" className="bg-primary p-1 sm:px-6 py-2 flex items-center rounded-sm">
+    <Link to="/cart" className="bg-primary p-1 sm:px-6 px-2 flex items-center rounded-sm">
     <HiShoppingCart className="" />
     <span>0</span>
     </Link>
