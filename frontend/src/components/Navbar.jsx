@@ -16,7 +16,7 @@ const navigation = [
 const Navbar = () => {
 
   const [isDropdownOpen, setIsDropdownOpen] = useState(false)
-  console.log(isDropdownOpen)
+  
 
   const currentUser = true;
   return (
@@ -48,7 +48,25 @@ const Navbar = () => {
           <button onClick={() => setIsDropdownOpen(!isDropdownOpen)}>
             <img src={avatarImg} alt="" className={`size-7 rounded-full ${currentUser ? 'ring-2 ring-blue-500' : ''}`} />
           </button>
-          </> : <link to="/login"><HiOutlineUserCircle className="size-6" /></link>
+          {/*dispay dropdowns*/}
+          {
+            isDropdownOpen && (
+              <div>
+                <ul>
+                  {
+                    navigation.map((item) => (
+                      <li key={item.name}>
+                        <Link to={item.href}>
+                        {item.name}
+                        </Link>
+                      </li>
+                            ))}
+                          </ul>
+              </div>
+            )
+          }
+          </>
+          : <Link to="/login"><HiOutlineUserCircle className="size-6" /></Link>
         }
       </div>
     
