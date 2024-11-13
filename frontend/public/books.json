@@ -6,18 +6,18 @@
       "category": "novel",
       "trending": true,
       "coverImage": "book-1.png",
-      "oldPrice": 29.99,
-      "newPrice": 19.99
+      "oldPrice": 39.99,
+      "newPrice": 29.99
     },
     {
       "_id": 2,
-      "title": "Top 10 Fiction Books This Year",
-      "description": "A curated list of the best fiction books that are trending this year.",
-      "category": "books",
+      "title": "Black and White",
+      "description": "A 2005 young adult novel about two best friends, Marcus and Eddie, who make a mistake that rocks their friendship and lives.",
+      "category": "fiction",
       "trending": true,
       "coverImage": "book-2.png",
-      "oldPrice": 24.99,
-      "newPrice": 14.99
+      "oldPrice": 34.99,
+      "newPrice": 24.99
     },
     {
       "_id": 3,
