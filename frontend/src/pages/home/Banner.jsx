@@ -4,7 +4,7 @@ import bannerImg from '../../assets/banner.png'
 
 const Banner = () => {
     return (
-      <div className="flex flex-col md:flex-row py-10 gap-4 items-center justify-between"> {/* Smaller gap */}
+      <div className="flex flex-col md:flex-row-reverse py-10 gap-4 items-center justify-between"> {/* Smaller gap */}
         
         {/* Left Container with Heading and Image */}
         <div className="md:w-1/2 w-full flex flex-col items-center md:items-start">
