@@ -2,10 +2,14 @@ import { Link } from "react-router-dom";
 import { HiHeart, HiMiniBars3CenterLeft, HiShoppingCart } from "react-icons/hi2";
 import { BsFillSearchHeartFill } from "react-icons/bs";
 import { HiOutlineUserCircle } from "react-icons/hi";
-
+import { useState } from "react";
 import avatarImg from "../assets/avatar.png";
 
 const Navbar = () => {
+
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false)
+  console.log(isDropdownOpen)
+
   const currentUser = true;
   return (
     <header className="max-w-screen-2xl mx-auto px-4 py-6">
@@ -33,7 +37,7 @@ const Navbar = () => {
       <div>
         {
           currentUser ? <>
-          <button>
+          <button onClick={() => setIsDropdownOpen(!isDropdownOpen)}>
             <img src={avatarImg} alt="" className={`size-7 rounded-full ${currentUser ? 'ring-2 ring-blue-500' : ''}`} />
           </button>
           </> : <link to="/login"><HiOutlineUserCircle className="size-6" /></link>
