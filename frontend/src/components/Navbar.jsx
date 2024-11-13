@@ -48,6 +48,7 @@ const Navbar = () => {
           <button onClick={() => setIsDropdownOpen(!isDropdownOpen)}>
             <img src={avatarImg} alt="" className={`size-7 rounded-full ${currentUser ? 'ring-2 ring-blue-500' : ''}`} />
           </button>
+
           {/*dispay dropdowns*/}
           {
             isDropdownOpen && (
@@ -55,7 +56,7 @@ const Navbar = () => {
                 <ul className="py-2">
                   {
                     navigation.map((item) => (
-                      <li key={item.name}>
+                      <li key={item.name} onClick={() => setIsDropdownOpen(false)}>
                         <Link to={item.href} className="block px-4 py-2 text-sm hover:bg-gray-100">
                         {item.name}
                         </Link>
