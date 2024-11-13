@@ -4,6 +4,7 @@ import { BsFillSearchHeartFill } from "react-icons/bs";
 import { HiOutlineUserCircle } from "react-icons/hi";
 
 const Navbar = () => {
+  const currentUser = true;
   return (
     <header className="max-w-screen-2xl mx-auto px-4 py-6">
 <nav className="flex justify-between items-center ">
@@ -27,7 +28,16 @@ const Navbar = () => {
 
     {/*Right*/}
     <div className="relative flex items-center md:space-x-3 space-x-2">
-    <HiOutlineUserCircle className="size-6" />
+      <div>
+        {
+          currentUser ? <>
+          <button>
+            <img src="" alt=""/>
+          </button>
+          </> : <link to="/login"><HiOutlineUserCircle className="size-6" /></link>
+        }
+      </div>
+    
     <button className="hidden sm:block">
     <HiHeart className="size-6"/>
     </button>
