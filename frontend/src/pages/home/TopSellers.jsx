@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react'; // Import useEffect
 import BookCard from '../books/BookCard';
 
-const categories = ['Choose a genre', 'Horror', 'Fiction', 'Adventure', 'Business'];
+const categories = ['Select a genre', 'Horror', 'Fiction', 'Adventure', 'Business'];
 
 const TopSellers = () => {
     const [books, setBooks] = useState([]); // Store the fetched books data
-    const [selectedCategory, setSelectedCategory] = useState('Choose a genre'); // Store the selected category
+    const [selectedCategory, setSelectedCategory] = useState('Select a genre'); // Store the selected category
 
     useEffect(() => {
         // Fetch data from books.json
@@ -14,7 +14,7 @@ const TopSellers = () => {
             .then((data) => setBooks(data)); // Set the books data to state
     }, []); // Empty dependency array, so it runs only once when the component mounts
 
-const filteredBooks =  selectedCategory === 'Choose a genre' ? books : books.filter(book => book.category === selectedCategory.toLowerCase())
+const filteredBooks =  selectedCategory === 'Select a genre' ? books : books.filter(book => book.category === selectedCategory.toLowerCase())
 
 console.log(filteredBooks);
 
