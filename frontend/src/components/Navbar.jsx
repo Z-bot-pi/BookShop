@@ -2,8 +2,16 @@ import { Link } from "react-router-dom";
 import { HiHeart, HiMiniBars3CenterLeft, HiShoppingCart } from "react-icons/hi2";
 import { BsFillSearchHeartFill } from "react-icons/bs";
 import { HiOutlineUserCircle } from "react-icons/hi";
-import { useState } from "react";
+
 import avatarImg from "../assets/avatar.png";
+import { useState } from "react";
+
+const navigation = [
+  {name: "Dashboard", href:"/dashboard"},
+  {name: "Orders", href:"/orders"},
+  {name: "Cart Page", href:"/cart"},
+  {name: "CheckOut", href:"/checkout"},
+]
 
 const Navbar = () => {
 
