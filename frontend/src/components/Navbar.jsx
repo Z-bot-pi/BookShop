@@ -26,7 +26,7 @@ const Navbar = () => {
     </div>
 
     {/*Right*/}
-    <div>
+    <div className="relative flex items-center md:space-x-3 space-x-2">
     <HiOutlineUserCircle className="size-6" />
     <button className="hidden sm:block">
     <HiHeart className="size-6"/>
@@ -34,7 +34,7 @@ const Navbar = () => {
 
     <Link to="/cart" className="bg-primary p-1 sm:px-6 px-2 flex items-center rounded-sm">
     <HiShoppingCart className="" />
-    <span>0</span>
+    <span className="text-sm font-semibold sm:ml-1">0</span>
     </Link>
     </div>
 </nav>
