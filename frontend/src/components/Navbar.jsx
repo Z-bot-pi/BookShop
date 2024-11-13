@@ -7,14 +7,16 @@ const Navbar = () => {
     <header className="max-w-screen-2xl mx-auto px-4 py-6">
 <nav className="flex justify-between items-center ">
     {/*Left*/}
-    <div>
+    <div className="flex items-center md:gap-16 gap-4">
       <Link to="/">
       <HiMiniBars3CenterLeft className="size-6"/>
       </Link>
 
       {/*input search*/}
-      <div>
-      <BsFillSearchHeartFill />
+      <div className="relative sm:w-72 w-40 space-x-2">
+
+      <BsFillSearchHeartFill className="absolute inline-block left-3 inset-y-2" />
+
       <input type="text" placeholder="Enter your search term" 
       className="bg-[#EAEAEA] w-full py-1 md:px-8 px-6 rounded-md focus:outline-none" 
       />
