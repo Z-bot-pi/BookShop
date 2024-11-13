@@ -3,6 +3,8 @@ import { HiHeart, HiMiniBars3CenterLeft, HiShoppingCart } from "react-icons/hi2"
 import { BsFillSearchHeartFill } from "react-icons/bs";
 import { HiOutlineUserCircle } from "react-icons/hi";
 
+import avatarImg from "../assets/avatar.png";
+
 const Navbar = () => {
   const currentUser = true;
   return (
@@ -32,7 +34,7 @@ const Navbar = () => {
         {
           currentUser ? <>
           <button>
-            <img src="" alt=""/>
+            <img src={avatarImg} alt="" style={{ width: "50px", height: "50px", borderRadius: "50%" }} />
           </button>
           </> : <link to="/login"><HiOutlineUserCircle className="size-6" /></link>
         }
